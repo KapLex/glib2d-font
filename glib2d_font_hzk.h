@@ -1,4 +1,4 @@
-
+//
 #ifndef GLIB2D_FONT_HZK_H
 #define GLIB2D_FONT_HZK_H
 
