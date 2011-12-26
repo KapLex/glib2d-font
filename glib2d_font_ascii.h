@@ -25,11 +25,11 @@ typedef struct {
     unsigned int ascii_map[256];
 }g2dFont_ASCII;
 
-g2dFont_ASCII * g2dLoadFont_ASCII(const char *name);
+g2dFont_ASCII * g2dLoadFont_ASCII( char *name);
 
 void g2dFontBegin_ASCII(g2dFont_ASCII* font);
 
-void g2dSetText_ASCII(unsigned char *text);
+void g2dSetText_ASCII( char *text);
 
 void g2dFontAdd_ASCII(void);
 

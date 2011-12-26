@@ -39,13 +39,13 @@ typedef struct {
 }g2dFont;
 
 
-g2dFont* g2dLoadFont(const char *name);
+g2dFont* g2dLoadFont( char *name);
 
 void g2dFreeFont(g2dFont * font);
 
 void g2dFontBegin(g2dFont* font);
 
-void g2dSetText(unsigned char *text);
+void g2dSetText( char *text);
 
 void g2dFontAdd(void);
 

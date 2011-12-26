@@ -23,7 +23,7 @@ static g2dFont * obj_font;
 static char * obj_text;
 
 
-g2dFont* g2dLoadFont(const char *name){
+g2dFont* g2dLoadFont( char *name){
     g2dFont* font=(g2dFont*)malloc(sizeof(g2dFont));
 	strncpy(font->name,name,255);	
     font->HZK=fopen(name,"rb");
@@ -65,9 +65,9 @@ int g2dInitCHAR(CHAR* c, g2dFont* font){
 			{                
                 xx=j*8+k;
 				if(mat[yy*2+j] & (0x80>>k)){
-                     //font->hzk_texture->data[(y+yy)*512+x+xx]=WHITE;
+                     font->hzk_texture->data[(y+yy)*512+x+xx]=WHITE;
                      // am I right?
-                     memset(font->hzk_texture->data+(y+yy)*512+x+xx,WHITE,sizeof(WHITE));
+                    // memset(font->hzk_texture->data+(y+yy)*512+x+xx,WHITE,sizeof(WHITE));
                 }
 			}
 		}
@@ -98,7 +98,7 @@ CHAR* g2dCacheCHAR(unsigned char word[2],g2dFont* font){
 
 
 
-void g2dCHARPrint(const CHAR *c){
+void g2dCHARPrint( CHAR *c){
     
 
     g2dSetCropWH(16,16); 
@@ -112,7 +112,7 @@ void g2dFontBegin(g2dFont* font){
      g2dSetScaleWH(16,16);
 }
 
-void g2dSetText(unsigned char *text){
+void g2dSetText( char *text){
     obj_text=text;
 }
 void g2dFontAdd(void){

@@ -22,7 +22,7 @@ void g2dFreeFont_ASCII(g2dFont_ASCII  * font){
 }
 
 
-g2dFont_ASCII * g2dLoadFont_ASCII(const char *name){
+g2dFont_ASCII * g2dLoadFont_ASCII( char *name){
     int i, xx, yy;
     int x=0; int y=0; 
     unsigned long offset;
@@ -49,9 +49,9 @@ g2dFont_ASCII * g2dLoadFont_ASCII(const char *name){
         for(yy=0;yy<16;yy++){
               for(xx=0;xx<8;xx++){
                   if(ascii[yy] & (0x80>>xx)){
-                      //font->asc_texture->data[x+xx+(y+yy)*256]=WHITE;
+                      font->asc_texture->data[x+xx+(y+yy)*256]=WHITE;
                      // am I right?
-                     memset(font->asc_texture->data+x+xx+(y+yy)*256,WHITE,sizeof(WHITE));                                                      
+                     //memset(font->asc_texture->data+x+xx+(y+yy)*256,WHITE,sizeof(WHITE));                                                      
                   }
               }                
         }
@@ -70,7 +70,7 @@ void g2dFontBegin_ASCII(g2dFont_ASCII* font){
      obj_font_ascii=font;
      g2dSetScaleWH(8,16);     
 }
-void g2dSetText_ASCII(unsigned char *text){
+void g2dSetText_ASCII( char *text){
      obj_text_ascii=text;
 
 }
