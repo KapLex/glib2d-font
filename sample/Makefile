@@ -1,7 +1,8 @@
 MEDIA = /media/PANDORA/psp/game/CAT_Homebrews\ perso/
 TARGET = gLib2D-objcontrol
 
-OBJS = main.o glib2d.o  glib2d_font_hzk.o glib2d_font_ascii.o
+OBJS = main.o\
+       ../src/glib2d.o  ../src/glib2d_font_hzk.o ../src/glib2d_font_ascii.o
 LIBS = -ljpeg -lpng -lz -lpspgum -lpspgu -lpsprtc -lm -lpspvram
 
 CFLAGS = -O2 -G0 -Wall -g
