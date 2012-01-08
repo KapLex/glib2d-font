@@ -4,9 +4,9 @@
 
 #include <pspkernel.h>
 #include <pspctrl.h>
-#include "glib2d.h"
-#include "glib2d_font_hzk.h"
-#include "glib2d_font_ascii.h"
+#include "../src/glib2d.h"
+#include "../src/glib2d_font_hzk.h"
+#include "../src/glib2d_font_ascii.h"
 
 #define TEXSIZE 256;
 PSP_MODULE_INFO("App",0,1,1);
